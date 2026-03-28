@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Sorter",
+  "version": "1.5",
+  "author": "Javer D Benito",
+  "description": "Automatically sorts your downloads into custom folders based on website source, filename keywords, and file extensions.",
+  "permissions": ["downloads", "identity", "identity.email", "storage"],
+  "background": {
+    "service_worker": "app/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

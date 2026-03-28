@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Download Sorter Settings</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="icon" id="config">⚙️</button>
+      <h1 class="title">Download Sorter</h1>
+    </header>
+    <div class="column-container">
+      <div class="column" id="rootColumn">
+        <div id="explorerView">
+          <button class="folder" id="root">🗂️ UserName</button>
+        </div>
+
+        <div id="rulesView" style="display: none;">
+          <h3 style="font-size: 0.9rem; margin-bottom: var(--space-sm);">Sorting Rules</h3>
+
+          <button class="folder-wrapper plus-btn" id="addSiteRule">
+            🌐 Add Site Rule
+          </button>
+
+          <button class="folder-wrapper plus-btn" id="addNameRule">
+            🔍 Add Filename Rule
+          </button>
+        </div>
+      </div>
+      <div class="column" id="folderColumn">
+        <button id="addFolderBtn" class="folder-wrapper plus-btn">✚ Add Category</button>
+      </div>
+      <div class="column" id="fileExtension">
+        <button id="addExtBtn" class="extension-item plus-btn" style="display: none;">✚ Add Extension</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="app/app.js"></script>
+</body>
+
+</html>
