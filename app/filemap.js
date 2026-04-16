@@ -15,6 +15,6 @@ export const DEFAULT_FILE_MAP = {
   ],
   "Archives": [
     "zip", "rar", "7z", "tar", "gz", "tgz", "bz2", "tbz", "xz", "lz", 
-    "lzma", "iso", "cab", "z", "arj", "ace"
+    "lzma", "iso", "cab", "z", "arj", "ace", "jar", "war", "ear"
   ]};
 
