@@ -17,3 +17,4 @@ export const DEFAULT_FILE_MAP = {
     "zip", "rar", "7z", "tar", "gz", "tgz", "bz2", "tbz", "xz", "lz", 
     "lzma", "iso", "cab", "z", "arj", "ace"
   ]};
+
