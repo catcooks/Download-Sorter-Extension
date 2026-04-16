@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #64748b;
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --error-color: #ef4444;
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-base: 1rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --transition-fast: 0.2s ease;
+}
+
+body {
+  margin: 0;
+  background: rgba(15, 23, 42, 0.9);
+  font-family: var(--font-main);
+  color: var(--text-color);
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
+  padding: var(--space-lg);
+  background-color: var(--bg-color);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+  border: none;
+  background: none;
+}
+
+header,
+.column-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+header button {
+  font-size: 1.8rem;
+}
+
+.column {
+  display: grid;
+  align-content: start;
+  width: 33%;
+  height: 400px;
+  padding: var(--space-md);
+  gap: var(--space-sm);
+  background-color: var(--bg-color);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: all var(--transition-fast);
+}
+
+.folder-wrapper,
+.extension-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--space-sm);
+  padding-right: 10px;
+  background-color: var(--bg-color);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: all var(--transition-fast);
+}
+
+#explorerView,
+#rulesView {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.folder-btn,
+.folder,
+input.folder-btn {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-color);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input.folder-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.delete-btn {
+  min-width: 30px;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.plus-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  margin-top: var(--space-md);
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px dashed var(--primary-color);
+  cursor: pointer;
+}
+
+.folder-wrapper:hover,
+.column:hover,
+.extension-item:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.folder-wrapper:active {
+  background-color: #f1f5f9;
+  transform: scale(0.98);
+}
+
+.plus-btn:hover {
+  background-color: #eff6ff;
+  transform: scale(1.02);
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.delete-btn:contains('❓') {
+  color: var(--error-color);
+  font-weight: bold;
+}
+
+.inline-input-active {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.icon.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+/* Reset Button Styling */
+.reset-btn {
+  color: var(--error-color);
+  border-color: var(--error-color);
+  margin-top: 2rem; /* Pushes it away from the other buttons */
+}
+
+.reset-btn:hover {
+  background: #fef2f2; /* Light red hover */
+  border-color: var(--error-color);
+  transform: scale(1.02);
+}
